@@ -1,0 +1,671 @@
+26. Bila diberi masukan bilangan 77, maka program akan memberikan keluaran …  
+jawab = 
+jika x > 1 maka bertambah satu
+    dan menghitung fungsi solve
+
+hasil = 1
+solve(77 div 2 + 77 mod 2)  38 + 1 = 39
+hasil = 2
+solve(39 div 2 + 39 mod 2)  19 + 1 = 20
+hasil = 3
+solve(20 div 2 + 20 mod 2)  10 + 0 = 10
+hasil = 4
+solve(10 div 2 + 10 mod 2)   5 + 0 = 5
+hasil = 5
+solve( 5 div 2 +  5 mod 2)   2 + 1 = 3
+hasil = 6
+solve( 3 div 2 +  3 mod 2)   1 + 1 = 2
+hasil = 7
+solve( 2 div 2 +  2 mod 2)   1 + 0 = 1
+
+32. Bila kita memanggil prosedur tulis(30,30), berapakah jumlah ‘*’ yang tertulis?  {tuliskan angkanya} 
+jawab = 
+tulis(30,30)
+for i := 1 to 30 do   = 30
+begin
+  for j := 1 to (30 div 30) do  = 1
+  for k := 1 to 30 do  = 30
+  write('*');
+jumlah ('*') yang tertulis adalah 30*1*30 = 900
+
+36. Apakah output dari pemanggilan writeln(hop(18, 3, 1993)) ? 
+37. Apakah output dari pemanggilan writeln(hip(hop(201,320,12), hop(20,1120,10)) + hap(21,30)) ? 
+jawab =
+36. 
+hop(18,3,1993)
+jika y > z maka hop = hop(x,z,y)
+dan jika x > y maka hop = hop(y,x,z)
+dan hop = hip(x,y)
+
+-Masuk ke function hop
+karena x > y maka hop = hop(3,18,1993) hitung function
+karena y /> z dan x/> y maka hop = hip(18,13) + z hitung function
+-Masuk ke function hip
+karena x /< y maka hip = hap(18,1) + hap(3,2) hitung function
+-Masuk ke function hap
+hap(18,1)
+  karena t = 1 maka 
+  hap = 18 mod 5 = 3
+hap(3,2)
+  karena t/= 1 maka
+  hap = 5*3 = 15
+
+jadi hasil dari dari 
+hop = hip(18,13) + z
+hip = hap(18,1) + hap(3,2) 
+hop =    3      +   15    + 1993 = 2011
+
+37.
+(hip(hop(201,320,12), hop(20,1120,10)) + hap(21,30)
+ hip(381,1170) + 105  
+    1905       + 105 = 2010
+
+*hop(201,320,12)
+karena y > z maka hop(201,12,320)
+karena x > y maka hop(12,201,320)
+karena tidak memenuhi kondisi if maka
+hop = hip(12,201) + 320
+          61      + 320 = 381
+
+-hip(12,201)
+karena x < y maka hip(201,12)
+tidak memenuhi kondisi if maka
+hip := hap(201,1) + hap(12,2)
+           1      +   60     = 61
+
+-hap(201,1)
+  karena t = 1 maka 
+   hap := 201 mod 5 = 1
+-hap(12,2)
+  karena tidak memenuhi kondisi if maka
+   hap := 5 * 12 = 60 
+
+*hop(20,1120,10)
+  karena y > z maka hop = hop(20,10,1120) 
+  karena x > y maka hop = hop(10,20,1120)
+  karena tidak memenuhi kondisi if maka
+    hop = hip(10,20) + 1120
+             50      + 1120 = 1170
+
+*hip(10,20)
+  karena x < y maka hip(20,10)
+  karena tidak memenuhi kondisi if maka
+  hip := hap(20,1) + hap(10,2)
+            0      +     50   =  50
+
+*hap(20,1)
+  karena t = 1 maka
+    hap = 20 mod 5 = 0
+*hip(10,2)
+  karena tidak memenuhi kondisi if maka
+    hap := 5*10 = 50
+
+*hap(21,30)
+  karena tidak memenuhi kondisi if maka
+    hap = 5 * 21 = 105
+
+*hip(381,1170) 
+  karena x < y maka hip(1170,381)
+  karena tidak memenuhi kondisi if maka
+  hip := hap(1170,1) + hap(381,2)
+
+*hap(1170,1)
+  karena t = 1 maka
+   hap := 1170 mod 5 = 0
+
+*hap(381,5)
+  hap := 5 * 381 = 1905
+
+43. Apakah keluaran dari program di atas?
+jawab = 0
+x = 0
+i = 1 2 3 4 5
+j = 5 4 3 2 1
+x = x + i + j
+pengulangan j 5 kali
+x = 0 + 1 + 5 = 6
+x = 6 + 2 + 4 = 12
+x = 12 + 3 + 3 = 18
+x = 18 + 4 + 2 = 24
+x = 24 + 5 + 1 = 30
+pengulangan i 5 kali
+30 * 5 = 150
+
+44. Apa keluaran yang dihasilkan dari program tersebut?  
+45. Jika perintah “write(a,' ');” diubah menjadi “write(b,' ');” maka keluaran yang dihasilkan menjadi?  
+jawab = 
+44. x = 219 
+    y = 168
+abc(219,168)
+jika a>b maka
+a = a mod b
+a = 51
+abc(168,51)
+a = a mod b
+a = 15
+abc(51,15)
+a = 6
+abc(15,6)
+a = 3
+abc(6,3)
+a = 0
+jadi keluaran yang dihasilkan program adalah 0 3 6 15 51
+
+45. x = 219
+    y = 168
+
+abc(168,219)
+b = 168
+abc(219,168)
+b = 51
+abc(168,51)
+b = 15
+abc(51,15)
+b = 6
+abc(15,6)
+b = 3
+abc(6,3)
+b = 0
+maka keluarannya adalah 0 3 6 15 51 168
+
+47. Berapakah bilangan yang tercetak dilayar jika dilakukan pemanggilan f(15,97,0)? 
+jawab = 
+f(15,97,0)
+karena y /= 0 maka
+jika 97 mod 2 = 1 maka z = 0 + 15
+f(30,48,15)
+karena 48 mod 2 = 0 maka z tidak ditambah x (z = 15)
+f(60,24,15)
+24 mod 2 = 0    z = 15
+f(120,12,15)
+12 mod 2 = 0    z = 15
+f(240,6,15)
+6 mod 2 = 0     z = 15
+f(480,3,15)
+3 mod 2 = 1     z = 15 + 480
+                z = 495
+f(960,1,495)
+1 mod 2 = 1     z = 495 + 960
+                z = 1455
+f(1920,0,1455)
+karena y = 0 maka z = 1455
+
+48. Berapakah nilai yang dihasilkan dari pemanggilan fungsi flip(4,7)? 
+jawab = 
+flip(4,7)
+   a /= 0 maka flip = 4 + flop(3,7)
+flop(3,7)
+   b /= 0 maka flop = 7 + flip(3,6)
+flip(3,6)
+   a /= 0 maka flip = 3 + flop(2,6)
+flop(2,6)
+   b /= 0 maka flop = 6 + flip(2,5)
+flip(2,5)
+   a /= 0 maka flip = 2 + flop(1,5)
+flop(1,5)
+   b /= 0 maka flop = 5 + flip(1,4)
+flip(1,4)
+   a /= 0 maka flip = 1 + flop(0,4)
+flop(0,4)
+   b /= 0 maka flop = 4 + flip(0,3)
+flop(0,3)
+   a = 0  maka flip = 0
+
+jadi fungsi dari flip(4,7) adalah
+flip = 4 + flop(3,7)
+flip = 4 + 7 + 3 + 6 + 2 + 5 + 1 + 4 + 0
+flip = 32
+
+49.
+dari fungsi diatas ternyata fungsi flip bisa dihitung dengan a(b+1)
+4(7+1) = 32
+maka fungsi flop bisa dihitung (a+1)b
+flop(100,200)
+(100+1)200 = 20200
+
+28. Berapa kalikah kibo(3) dipanggil saat pemanggilan kibo(7) ?  {tuliskan angkanya}  
+jawab = 
+kibo(7)
+maka 
+kibo(6) + kibo(4)
+kibo(5) + kibo(3) + kibo(3) + kibo(1)
+kibo(4) + kibo(3) + kibo(2) + kibo(4)
+kibo(3) + kibo(2) + kibo(3)+ kibo(2) + kibo(3) + kibo(1)
+
+
+29. Apakah keluaran dari program tersebut?
+jawab =
+1. f(3,11)
+karena x /= y maka
+a := f(3,7)
+b := f(8,11)
+
+2. f(3,7)
+a := f(3,5)
+b := f(6,7)
+
+3. f(3,5)
+a := f(3,4)
+b := f(5,5)
+
+4. f(3,4)
+a := f(3,3)
+b := f(4,4)
+
+a := f(3,3) := z[3]
+b := f(4,4) := z[4] 
+z[3] := 56 
+z[4] := 67
+jika a < b maka f := a
+56 < 67 maka f = 56
+f(3,4) := 56
+------------
+kembali ke atas
+a := f(3,4) := 56
+b := f(5,5) := z[5] = 66
+56 < 66 maka f = 56
+f(3,5) = 56
+------------
+a := f(3,5) := 56
+b := f(6,7) := f(7,7) = z[7] = 31
+56 < 31 maka f := b
+f(3,7) = 31
+-------------
+a := f(3,7) := 31
+b := f(8,11):= f(10,11)
+b := f(10,10) = z[10] = 10
+31 < 10 maka f := b
+we:= f(3,11) = 10
+-------------
+
+34. Berapakah output dari program di atas?
+jawab =
+p(1,13)
+p = 32
+for i = 1 to 13 do
+1. p = q(32,32)
+    karena d <> 0 maka
+    e = 32 mod 32 = 1
+    q:=q(32,1)
+       karena d <> 0 maka
+       e = 32 mod 1 = 0
+       q = q(1,0)
+           karena d = 0 maka
+           q = 1
+
+2. p = q(32,6)
+    karena d <> 0 maka
+    e = 32 mod 6 = 2
+    q = q(6,2)
+        karena  d <> 0 maka
+        e = 6 mod 2 = 0
+        q = q(2,0)
+            karena d = 0 maka
+            q = 2
+
+3. p = q(32,12)
+    karena d <> 0 maka
+    e = 32 mod 12 = 8
+    q = q(12,8)
+        
+        e = 12 mod 8 = 4
+        q = q(8,4)       
+            
+            e = 8 mod 4 = 0
+            q = q(4,0)
+                karena d = 0 maka
+                q = 4
+
+4. p = q(32,64)
+    karena d <> 0 maka
+    e = 32 mod 64 = 32
+    q = q(64,32)
+        karena d <> 0 maka
+        e = 64 mod 32 = 0
+        q = q(32,0)
+            karena d = 0 maka
+            q = 32
+
+5. p = q(32,68)
+    karena d <> 0 maka
+    e = 32 mod 68 = 32
+    q = q(32,32)
+        karena d <> 0 maka
+        e = 32 mod 32 = 0
+        q = q(32,0)
+            karena d = 0 maka
+            q = 32
+
+6. p = q(32,100)
+    karena d <> 0 maka
+    e = 32 mod 100 = 32
+    q = q(100,32)
+        karena d <> 0 maka
+        e = 100 mod 32 = 4
+        q = q(32,4)
+            karena d <> 0 maka
+            e = 32 mod 4 = 0
+            q = q(4,0)
+                karena d = 0 maka
+                q = 4
+
+7. p = q(32,214)
+    karena d <> 0 maka
+    e = 32 mod 214 = 32
+    q = q(214,32)
+        karena d <> 0 maka
+        e = 214 mod 32 = 22
+        q = q(32,22)
+            karena d <> 0 maka
+            e = 32 mod 22 = 10
+            q = q(22,10)
+                karena d <> 0 maka
+                e = 22 mod 10 = 2
+                q = q(10,2)
+                    karena d <> 0 maka
+                    e = 10 mod 2 = 0
+                    q = q(2,0)
+                        karena d = 0 maka
+                        q = 2 
+
+8. p = q(32,120)
+    karena d <> 0 maka
+    e = 32 mod 120 = 32
+    q = q(120,32)
+        karena d <> 0 maka
+        e = 120 mod 32 = 24
+        q = q(32,24)
+            karena d <> 0 maka
+            e = 32 mod 24 = 8
+            q = q(24,8)
+                karena d <> 0 maka
+                e = 24 mod 8 = 0
+                q = q(8,0)
+                    karena d = 0 maka
+                    q = 8
+
+9. p = q(32,30)
+    karena d <> 0 maka
+    e = 32 mod 30 = 2
+    q = q(30,2)
+        karena d <> 0 maka
+        e = 30 mod 2 = 0
+        q = q(2,0)
+            karena d = 0 maka
+            q = 2 
+
+10. p = q(32,80)
+     karena d <> 0 maka
+     e = 32 mod 80 = 32
+     p = q(80,32)
+         karena d <> 0 maka
+         e = 80 mod 32 = 16
+         p = q(32,16)
+             karena d <> 0 maka
+             e = 32 mod 16 = 0
+             p = q(16,0)
+                 karena d = 0 maka
+                 q = 16
+
+11. q = q(32,24)
+            karena d <> 0 maka
+            e = 32 mod 24 = 8
+            q = q(24,8)
+                karena d <> 0 maka
+                e = 24 mod 8 = 0
+                q = q(8,0)
+                    karena d = 0 maka
+                    q = 8
+
+12. q = q(32,22)
+            karena d <> 0 maka
+            e = 32 mod 22 = 10
+            q = q(22,10)
+                karena d <> 0 maka
+                e = 22 mod 10 = 2
+                q = q(10,2)
+                    karena d <> 0 maka
+                    e = 10 mod 2 = 0
+                    q = q(2,0)
+                        karena d = 0 maka
+                        q = 2 
+
+13. q = q(32,88)
+            karena d <> 0 maka
+            e = 32 mod 88 = 32 
+            q = q(88,32)
+                karena d <> 0 maka
+                e = 88 mod 32 = 24
+                q = q(32,24)
+                    karena d <> 0 maka
+                    e = 32 mod 24 = 8
+                    q = q(24,8)
+                        karena d <> 0 maka
+                        e = 24 mod 8 = 0
+                        q = q(8,0)
+                            karena d = 0 maka
+                            q = 8
+
+jadi program ini mencari fpb dari index array 1 - 13
+hasilnya adalah 2
+
+27.
+kalimat = s4yA-BuK4N+oRanG aLaY!?
+lenght(kalimat) = 22
+for i := 22 downto 1 do
+begin
+  if pos(22,base) > 0 then
+  karena cc tidak terdapat di string
+  maka pos(22,base) = 0
+
+  if pos(21,base) > 0 then
+  karena cc tidak terdapat di string
+  maka pos(21,base) = 0
+ 
+  if pos(20,base) > 0 then
+  kata := kata & Y
+  kata := Y
+  setiap posisi CC yang terdapat didalam BASE
+  maka sebuah fungsi tersebut > 0
+  dan KATA akan mengeksekusi BASE di posisi CC
+  yang terdapat di KALIMAT
+ 
+jadi, sebuah kata yg dieksekusi dari base yg terdapat di posisi CC
+yang terdapat di kalimat adalah YLGRNKB
+
+40. 
+1. for i := 1 to 50
+   while (j <= i)
+
+   while(1 <= 1)
+   if (1 mod 1 = 0) then inc(z)
+   z = 1
+   inc (j)
+   j = 2
+
+   if(1 mod 2 <> 0) then mencari := mencari + 1
+   mencari = 1
+
+2. while (2 <= 2)
+   if (2 mod 2 = 0) then inc(z)
+   z = 2
+   inc(j);
+   j = 2
+   j = 3
+
+   karena 2 mod 2 = 0 maka mencari bernilai tetap
+
+3. while (3 <= 3)
+   if (3 mod 3 = 0) then inc(z)
+   z = 3
+   inc(j);
+   j = 2
+   j = 3
+   j = 4
+
+   if (3 mod 2 <> 0) then mencari := mencari + 1
+   mencari = 2
+
+jadi, program ini menentukan jumlah mencari bila (z mod 2 <> 0) maka mencari + 1
+jadi, jumlah dari mencari = 7
+
+42.
+for i := 1 to 10 do
+          1 2 3 4 5 6 7 8 9
+  data2 = 0 0 0 0 0 0 0 0 0  
+
+  data2 = 1 2 1 0 3 0 1 1 1
+
+for i = 1 to 10 do
+  1. inc(data2[data1[i]]);
+     inc(data2[3]) = 1  
+  2. inc(data2[9]) = 1 
+  3. inc(data2[2]) = 1 
+  4. inc(data2[2]) = 2
+  5. inc(data2[1]) = 1
+  6. inc(data2[5]) = 1
+  7. inc(data2[7]) = 1
+  8. inc(data2[5]) = 2
+  9. inc(data2[5]) = 3
+  10.inc(data2[8]) = 1
+
+for i = 2 to 10 do
+  data2[i] = data2[i] + data2[i-1];
+2.  data2[2] = data2[2] + data2[1];
+    data2[2] =    2     +     1   =  3
+
+3.  data2[3] = data2[3] + data2[2]
+    data2[3] =    1     +     3   =  4
+
+4.  data2[4] = data2[4] + data2[3]
+    data2[4] =    0     +     4   =  4
+
+5.  data2[5] = data2[5] + data2[4]
+    data2[5] =    3     +     4   =  7
+
+6.  data2[6] = data2[6] + data2[5]
+    data2[6] =    0     +     7   =  7
+
+7.  data2[7] = data2[7] + data2[6]
+    data2[7] =    1     +     7   =  8
+
+8.  data2[8] = data2[8] + data2[7]
+    data2[8] =    1     +     8   =  9
+
+9.  data2[9] = data2[9] + data2[8]
+    data2[9] =    1     +     9  =  10
+
+10. data2[10]= data2[10] + data2[9]
+    data2[10] =    0     +   10  =  10
+
+      i  = 1 2 3 4 5 6 7 8 9
+data2[i] = 1 3 4 4 7 7 8 9 10
+
+for i:= 10 downto 1 do
+begin
+     data3[data2[data1[i]] := data1[i];
+     dec(data2[data1[i]];
+end.
+
+10.  data3[data2[data1[10]] = data1[10];
+     data1[10] = 8
+     data2[data1[10]]
+     data2[8] = 9
+     data3[data2[8]]
+    *data3[9] = 8
+     dec(data2[data1[i]])
+     data2[8] = data2[8] - 1
+    -data2[8] = 8
+     
+9.   data3[data2[data1[9]]  = data1[9];
+     data1[9] = 5
+     data2[5] = 7
+    *data3[7] = 5
+    -data2[5] = 6
+
+8.   data3[data2[data1[8]]  = data1[8];
+     data1[8] = 5
+     data2[5] = 6
+    *data3[6] = 5
+    -data2[5] = 5
+     
+7.   data3[data2[data1[7]]  = data1[7];
+     data1[7] = 7
+     data2[7] = 8
+    *data3[8] = 7
+    -data2[7] = 7
+
+6.   data3[data2[data1[6]]  = data1[6];
+     data1[6] = 5
+     data2[5] = 5
+    *data3[5] = 5
+    -data2[5] = 4
+
+5.   data3[data2[data1[5]]  = data1[5];
+     data1[5] = 1
+     data2[1] = 1
+    *data3[1] = 1
+    -data2[1] = 0 
+     
+4.   data3[data2[data1[4]]  = data1[4];
+     data1[4] = 2
+     data2[2] = 3
+    *data3[3] = 2
+    -data2[2] = 2 
+
+3.   data3[data2[data1[3]]  = data1[3];
+     data1[3] = 2
+     data2[2] = 2
+    *data3[2] = 2
+    -data2[2] = 1 
+
+2.   data3[data2[data1[2]]  = data1[2];
+     data1[2] = 9
+     data2[9] = 10
+    *data3[10]= 9
+    -data2[9] = 9 
+
+1.  data3[data2[data1[1]]  = data1[1];
+     data1[1] = 3
+     data2[3] = 4
+    *data3[4] = 3
+    -data2[3] = 3
+
+for i:= 1 to 10 do
+ write(data3[i]);
+1. data3[1] = 1
+2. data3[2] = 2
+3. data3[3] = 2
+4. data3[4] = 3
+5. data3[5] = 5
+6. data3[6] = 5
+7. data3[7] = 5
+8. data3[8] = 7
+9. data3[9] = 8
+10.data3[10]= 9
+
+      i  = 1  2  3  4  5  6  7  8  9  10
+
+data1[i] = 3  9  2  2  1  5  7  5  5  8
+data2[i] = 1  3  4  4  7  7  8  9  10 10
+data3[i] = 1  2  2  3  5  5  5  7  8  9 
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
