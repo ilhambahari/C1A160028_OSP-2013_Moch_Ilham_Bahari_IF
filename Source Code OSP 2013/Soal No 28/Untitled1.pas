@@ -1,15 +1,22 @@
 uses crt;
 var
-a : integer;
+c : integer;
 function kibo(n: integer):integer;
+var
+a,b : integer;
 begin
   if (n = 2) or (n = 1) or (n = 0) then
     kibo := n
   else
-    kibo := kibo(n-1) + kibo(n-3);
+    begin
+      a:=n-1;
+      b:=n-3;
+      kibo := kibo(a) + kibo(b);
+      writeln('kibo := kibo(',a,') + kibo(',b,')');
+    end;
 end;
 begin
-  a:=kibo(7);
-  writeln(a);
+  c:=kibo(7);
+  writeln(c);
 readkey;
 end.
