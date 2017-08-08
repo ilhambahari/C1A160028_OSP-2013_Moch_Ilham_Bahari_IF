@@ -3,16 +3,32 @@ var
 we: longint;
 Z : array[1..15] of integer;
 function f(x: longint; y: longint): longint;
-var   a, b: longint;
+var
+a, b: longint;
+tambah,bagi,tambah_b,bagi_b : integer;
 begin
   if (x = y) then f := Z[y]
   else
   begin
-    a := f(x, (x+y) div 2);
-    b := f((x+y) div 2+1, y);
-  if (a < b) then f := a
+    tambah:=x+y;
+    bagi:=tambah div 2;
+    a := f(x, bagi);
+    writeln('a:= f(',x,',',bagi,')');
+    bagi_b:=(x+y) div 2+1;
+    b := f(bagi_b, y);
+    writeln('b:= f(',bagi_b,',',y,') ');
+    writeln;
+
+  if (a < b) then
+   begin
+     f := a;
+     writeln('F := ',f);
+   end
   else
+   begin
     f := b;
+    writeln('F := ',f);
+    end;
   end;
 end;
 
