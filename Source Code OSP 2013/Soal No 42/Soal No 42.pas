@@ -15,17 +15,34 @@ data1[8]:=5;
 data1[9]:=5;
 data1[10]:=8;
 for i:= 1 to 10 do
-data2[i] := 0;
+  begin
+    data2[i] := 0;
+    writeln('data2[',i,'] : ',data2[i]);
+  end;
+  writeln;
 for i:= 1 to 10 do
-inc(data2[data1[i]]);
+  begin
+    inc(data2[data1[i]]);
+    writeln('inc(data2[data1[',i,']] : ',data2[data2[data1[i]]]);
+   end;
+   writeln;
 for i:= 2 to 10 do
-data2[i] := data2[i] + data2[i-1];
+  begin
+    data2[i] := data2[i] + data2[i-1];
+    writeln('data2[',i,'] := data2[',i,'] + data2[',i-1,'] = ',data2[i],'');
+   end;
+   writeln;
 for i:= 10 downto 1 do
 begin
-data3[data2[data1[i]]] := data1[i];
- dec(data2[data1[i]]);
- end;
+  data3[data2[data1[i]]] := data1[i];
+    begin
+      writeln('data3[',data2[data1[i]],'] = ',data3[data2[data1[i]]],'');
+    end;
+  dec(data2[data1[i]]);
+
+end;
+writeln;
  for i:= 1 to 10 do
- write(data3[i]);
+ writeln('data3[',i,'] :',data3[i]);
  readkey;
  end.
